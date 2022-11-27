@@ -47,5 +47,12 @@ export class CarteiraComponent implements OnInit {
 
     console.log(this.urlPontos)
   }
+
+  addCarteira() {
+    let a = +this.infos.carteira + 200;
+    this.infos.carteira = a.toString();
+    this.urlUpdate();
+    
+  }
 }
 // carteira?pontos=3123&carteira=431&fatura=48

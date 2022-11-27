@@ -9,7 +9,7 @@
             <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink={{this.urlPontos}}>Pontos</button>
+            <button mat-menu-item routerLink="/pontos?pontos={{infos.pontos}}&carteira={{infos.carteira}}&fatura={{infos.fatura}}">Pontos</button>
             <button mat-menu-item routerLink={{this.urlHow}}>Como Juntar Pontos?</button>
         </mat-menu>
     </div>
@@ -61,7 +61,7 @@
                         R${{this.infos.carteira}},00</p>
                 </div>
 
-                <button style="margin-top: 20px; background-color:#F5954B; color:white;" mat-raised-button>Adicionar
+                <button style="margin-top: 20px; background-color:#F5954B; color:white;" mat-raised-button (click)="addCarteira()">Adicionar
                     Fundos</button>
 
             </div>

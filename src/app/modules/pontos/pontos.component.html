@@ -1,0 +1,38 @@
+<div class="back">
+    <div class="nav">
+        <button class="white_icon" routerLink="/pontos">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+            <img height="30" width="30" src="assets/COPELDIS.webp"/>
+        <button class="white_icon" routerLink="/how">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+
+    <div class="pontos">
+        <p style="color:white;font-weight: bold;">PONTOS COPEL
+        </p>
+        <p style="color:white;font-weight: bolder; font-size: 25px;">8888
+        </p>
+    </div>
+    
+    <ng-container *ngFor="let item of dataSource">
+
+        <div style="padding-left: 15px; padding-right: 15px; justify-content: space-between; align-items: center; display:flex; background-color:white; height:100px; width:330px; margin:auto; border-radius: 30px; margin-bottom: 10px;">
+            
+            <div style="display:flex; flex-direction: column;">
+                <p style="color:#71716F;font-weight: bold; font-size: 14px;">{{item.nome}}</p>
+                <img [src]="item.img" height="50" width="50" style="border-radius: 50%; margin-left: 15px; border-width: 5px;"/>
+                
+
+            </div>
+            <div style="display:flex; flex-direction:column;">
+                <p style="color:#71716F;font-weight: bolder; font-size: 30px;">{{item.preco}}</p>
+                <p style="color:#71716F;font-weight: bolder; font-size: small;">pontos copel</p>
+            </div>  
+    </div>
+
+</ng-container>
+
+</div>

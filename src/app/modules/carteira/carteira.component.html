@@ -3,14 +3,66 @@
         <button class="white_icon" routerLink="/pontos">
             <mat-icon>account_circle</mat-icon>
         </button>
-            <img height="30" width="30" src="assets/COPELDIS.webp"/>
-       
+        <img height="30" width="30" src="assets/COPELDIS.webp" />
+
         <button class="white_icon" [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
             <button mat-menu-item routerLink="/pontos">Pontos</button>
             <button mat-menu-item routerLink="/how">Como Juntar Pontos?</button>
-          </mat-menu>
+        </mat-menu>
     </div>
-</div>
+
+    <div
+        style="padding-left: 15px; padding-right: 15px; justify-content: space-between; align-items: center; display:flex; background-color:white; height:220px; width:330px; margin:auto; border-radius: 30px; margin-bottom: 10px;">
+        <div style="width: 100%; padding: 0px 20px 20px 20px">
+            <div style="display:flex; flex-direction: row; justify-content: space-between;">
+                <div style="display:flex; flex-direction:row;">
+                    <div style="height:30px; width:30px;">
+                        <img src="assets/fatura.png" />
+                    </div>
+                    <p style="font-weight: bold; font-size: large; margin-bottom: 30px;">Fatura</p>
+                </div>
+                <p style="color:#71716F;">A vencer</p>
+            </div>
+            <div style="display: flex; justify-content: left;">
+                <p style="color: #346FE3; font-size: 35px; margin:left">R$42,00</p>
+            </div>
+
+            <div style="margin-top:20px; display:flex; flex-direction: row; justify-content: space-between;">
+                <div
+                    style="text-align:left; display:flex; flex-direction: column; justify-content: space-between; color:#71716F;">
+                    <p style="font-weight:bold;">Referente a</p>
+                    <p>02/22</p>
+                </div>
+
+                <div
+                    style="text-align:left; display:flex; flex-direction: column; justify-content: space-between; color:#71716F;">
+                    <p style="font-weight:bold;">Vencimento</p>
+                    <p>12/03/22</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div
+        style="padding-left: 15px; padding-right: 15px; justify-content: space-between; align-items: center; display:flex; background-color:white; height:220px; width:330px; margin:auto; border-radius: 30px; margin-bottom: 10px;">
+        <div style="width: 100%; padding: 0px 20px 20px 20px">
+            <div style="display:flex; flex-direction: column; justify-content: space-between;">
+                <div style="display: flex; flex-direction:row;">
+                    <mat-icon style="color:#F5954B">payments</mat-icon>
+                    <p style="font-weight: bold; font-size: large; margin-bottom: 30px;">Minha Carteira</p>
+                </div>
+                <div style="display: flex; justify-content: left;">
+                    <p style="color: #346FE3; font-size: 35px; margin:left; margin-top: 10px; margin-bottom: 10px;">
+                        R$200,00</p>
+                </div>
+
+                <button style="margin-top: 20px; background-color:#F5954B; color:white;"
+                    mat-raised-button>Adicionar Fundos</button>
+
+            </div>
+
+
+        </div>

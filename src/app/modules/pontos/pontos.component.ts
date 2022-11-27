@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 
 interface premios {
@@ -16,13 +17,42 @@ interface premios {
 
 
 export class PontosComponent {
-  
+
   dataSource: premios[] = [
-    {nome: 'Panela Antiaderente',desc:'Marca Anitnomart', preco: 3212, img: 'assets/panela.png' },
-    {nome: 'Befenfícios',desc:'Muitos', preco: 1231 , img: 'assets/beneficios.png'},
-    {nome: 'Bicicleta Elétrica',desc:'Marca Kranom', preco: 2222, img: 'assets/bicicleta.png'},
+    { nome: 'Befenfícios', desc: 'Muitos', preco: 1231, img: 'assets/beneficios.png' },
+    { nome: 'Befenfícios', desc: 'Muitos', preco: 3431, img: 'assets/beneficios.png' },
+    { nome: 'Befenfícios', desc: 'Muitos', preco: 31, img: 'assets/beneficios.png' },
+    { nome: 'Befenfícios', desc: 'Muitos', preco: 11, img: 'assets/beneficios.png' },
   ]
 
   column = ['nome', 'preco'];
 
+
+  constructor(private _route: ActivatedRoute) {
+  }
+
+  urlHow: string = '';
+  urlCarteira: string = '';
+
+  infos = { pontos: '', carteira: '', fatura: '' }
+
+  urlBase = ''
+
+  ngOnInit(): void {
+    this._route.queryParams
+      .subscribe(params => {
+        this.infos.pontos = params['pontos'];
+        this.infos.carteira = params['carteira'];
+        this.infos.fatura = params['fatura'];
+        console.log(this.infos);
+
+        this.urlHow = '/how' + '?pontos=' + this.infos.pontos + '&carteira=' + this.infos.carteira + '&fatura=' + this.infos.fatura;
+        this.urlCarteira = '/carteira' + '?pontos=' + this.infos.pontos + '&carteira=' + this.infos.carteira + '&fatura=' + this.infos.fatura;
+
+        this.urlBase = '?pontos=' + this.infos.pontos + '&carteira=' + this.infos.carteira + '&fatura=' + this.infos.fatura;
+
+      }
+      );
+
+  }
 }

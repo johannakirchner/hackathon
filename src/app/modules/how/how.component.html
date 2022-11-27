@@ -10,6 +10,8 @@
         </button>
         <mat-menu #menu="matMenu">
             <button mat-menu-item routerLink="/pontos">Pontos</button>
+            <button mat-menu-item routerLink="/carteira">Carteira</button>
+
           </mat-menu>
     
         </div>
@@ -21,15 +23,22 @@
         </div>
 
 
-        <div style="padding-left: 15px; padding-right: 15px; justify-content: space-between; align-items: center; display:flex; background-color:white; height:100px; width:330px; margin:auto; border-radius: 30px; margin-bottom: 10px;">
+        <div style="padding: 15px; justify-content: space-between; align-items: center; display:flex; background-color:white; max-height:1000px; width:330px; margin:auto; border-radius: 30px; margin-bottom: 10px;">
             <table mat-table [dataSource]="data">
 
                 <ng-container matColumnDef="acao">
-                    <td mat-cell *matCellDef="let element"> {{element.acao}} </td>
+                    <td mat-cell *matCellDef="let element"> 
+                     <p style="  text-align: center; font-weight: bold; color:#71716F"> {{element.acao}} </p>
+                    </td>
                   </ng-container>
 
                 <ng-container matColumnDef="pontos">
-                <td mat-cell *matCellDef="let element"> {{element.pontos}} </td>
+                <td mat-cell *matCellDef="let element"> 
+                    <div style="display:flex; flex-direction: column;">
+                        <p style="  text-align: center; font-weight: bold; color:#71716F;"> {{element.pontos}} </p>
+                        <p style="  text-align: center; font-weight: bold; color:#71716F; font-size: small;"> pontos copel </p>
+                    </div>
+                </td>
                 </ng-container>
 
                 <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

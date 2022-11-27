@@ -53,6 +53,8 @@ export class CarteiraComponent implements OnInit {
     this.infos.carteira = a.toString();
     this.urlUpdate();
     
+    let b = +this.infos.pontos + 2.96*7.75;
+    this.infos.pontos = b.toString();
   }
 }
 // carteira?pontos=3123&carteira=431&fatura=48

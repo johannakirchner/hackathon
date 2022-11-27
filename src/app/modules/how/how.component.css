@@ -1,0 +1,38 @@
+.back{
+    background-color: #F4F5EF;
+    width: 350px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.nav {
+    background-color: #F5954B;
+    height: 50px;
+    width: 330px;
+    margin:auto;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.white_icon {
+    color: #FFFFFF;
+}
+
+.pontos {
+    background-color: #F5954B;
+    height: 50px;
+    width: 300px;
+    margin-left: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top:10px ;
+    margin-bottom: 15px;
+}
+

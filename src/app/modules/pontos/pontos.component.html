@@ -4,9 +4,14 @@
             <mat-icon>account_circle</mat-icon>
         </button>
             <img height="30" width="30" src="assets/COPELDIS.webp"/>
-        <button class="white_icon" routerLink="/how">
+       
+        <button class="white_icon" [matMenuTriggerFor]="menu">
             <mat-icon>menu</mat-icon>
         </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item routerLink="/how">Como Juntar Pontos?</button>
+            <button mat-menu-item routerLink="/carteira">Carteira</button>
+          </mat-menu>
     </div>
 
 

@@ -9,7 +9,7 @@
             <mat-icon>menu</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-            <button mat-menu-item routerLink=>Pontos</button>
+            <button mat-menu-item routerLink="/pontos">Pontos</button>
             <button mat-menu-item routerLink="/how">Como Juntar Pontos?</button>
         </mat-menu>
     </div>
@@ -27,7 +27,7 @@
                 <p style="color:#71716F;">A vencer</p>
             </div>
             <div style="display: flex; justify-content: left;">
-                <p style="color: #346FE3; font-size: 35px; margin:left">R$42,00</p>
+                <p style="color: #346FE3; font-size: 35px; margin:left">R${{this.infos.fatura}},00</p>
             </div>
 
             <div style="margin-top:20px; display:flex; flex-direction: row; justify-content: space-between;">
@@ -43,8 +43,8 @@
                     <p>12/03/22</p>
                 </div>
             </div>
-            <button style="margin-top: 20px; background-color:#F5954B; color:white;"
-            mat-raised-button>Pagar Fatura</button>
+            <button style="margin-top: 20px; background-color:#F5954B; color:white;" mat-raised-button (click)="pagarFatura()">Pagar
+                Fatura</button>
         </div>
     </div>
 
@@ -58,11 +58,11 @@
                 </div>
                 <div style="display: flex; justify-content: left;">
                     <p style="color: #346FE3; font-size: 35px; margin:left; margin-top: 10px; margin-bottom: 10px;">
-                        R$200,00</p>
+                        R${{this.infos.carteira}},00</p>
                 </div>
 
-                <button style="margin-top: 20px; background-color:#F5954B; color:white;"
-                    mat-raised-button>Adicionar Fundos</button>
+                <button style="margin-top: 20px; background-color:#F5954B; color:white;" mat-raised-button>Adicionar
+                    Fundos</button>
 
             </div>
 

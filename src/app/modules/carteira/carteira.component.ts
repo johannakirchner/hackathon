@@ -10,10 +10,7 @@ export class CarteiraComponent implements OnInit {
   constructor(private _route: ActivatedRoute) {
   }
 
-  p = '';
-  c = '';
-  f = '';
-  infos = { pontos:'',carteira: '',fatura:''}
+  infos = { pontos: '', carteira: '', fatura: '' }
 
   ngOnInit(): void {
     this._route.queryParams
@@ -25,9 +22,14 @@ export class CarteiraComponent implements OnInit {
       }
       );
   }
+  urlRoute(base: string) {
+    return base + '?pontos=' + this.infos.pontos + '&carteira=' + this.infos.carteira + '&fatura=' + this.infos.fatura;
+  }
 
+  pagarFatura() {
+    let a = +this.infos.carteira - +this.infos.fatura;
+    this.infos.carteira = a.toString();
+    this.infos.fatura = '0';
+  }
 }
 // carteira?pontos=3123&carteira=431&fatura=48
-function urlRoute(base:string) {
-  return base + '?pontos=' + infos.pontos + '&carteira=' + infos.carteira + '&fatura=' + infos.fatura;
-}
